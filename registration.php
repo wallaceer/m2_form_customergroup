@@ -6,6 +6,6 @@
 
 \Magento\Framework\Component\ComponentRegistrar::register(
     \Magento\Framework\Component\ComponentRegistrar::MODULE,
-    'Ws_Regformcustomergroup',
+    'Ws_Customer',
     __DIR__
 );

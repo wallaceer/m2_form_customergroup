@@ -1,6 +1,6 @@
 <?php
 
-namespace Ws\Regformcustomergroup\Observer;
+namespace Ws\Customer\Observer;
 
 use Magento\Framework\Event\ObserverInterface;
 use Magento\Customer\Api\CustomerRepositoryInterface;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Ws\Regformcustomergroup\Block;
+namespace Ws\Customer\Block;
 
 use Magento\Framework\View\Element\Template;
 use Magento\Customer\Model\ResourceModel\Group\Collection as CustomerGroup;
