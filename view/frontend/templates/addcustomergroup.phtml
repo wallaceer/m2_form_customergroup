@@ -1,15 +1,18 @@
 <?php
 
-//$blockObj= $block->getLayout()->createBlock('Ws\Regformcustomergroup\Block\CustomerGroups');
+//$blockObj = $block->getLayout()->createBlock('Ws\Customer\Block\Customergroups');
+//$groups = $blockObj->getCustomerGroup();
+
+//$blockObj= $block->getLayout()->createBlock('Ws\Customer\Block\CustomerGroups');
 //$groups = $blockObj->getCustomerGroups();
-$groups = [];
+$groups = [['value'=>'7','label'=>'Privati'],['value'=>'8','label'=>'Aziende']];
 ?>
 <div class="field group_id required">
     <label for="group_id" class="label"><span><?php /* @escapeNotVerified */ echo __('I want to register as') ?></span></label>
     <div class="control">
         <select name="group_id">
             <?php foreach ($groups as $key => $data) { ?>
-                <option value="<?php echo $data['value'] ?>"><?php echo $data['label'] ?>"</option>
+                <option value="<?php echo $data['value'] ?>"><?php echo $data['label'] ?></option>
             <?php } ?>
         </select>
     </div>
