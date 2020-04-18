@@ -18,11 +18,6 @@ class SaveCustomerGroup implements ObserverInterface
 
     public function execute(\Magento\Framework\Event\Observer $observer)
     {
-        /*$customer = $observer->getEvent()->getCustomer();
-        if ($customer->getGroupId() == 1) {
-            $customer->setGroupId(self::CUSTOMER_GROUP_ID);
-            $this->_customerRepositoryInterface->save($customer);
-        }*/
 
         $accountController = $observer->getAccountController();
         $request = $accountController->getRequest();
