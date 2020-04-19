@@ -1,7 +1,24 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
 <body>
+
+    <!-- Questo non funziona-->
+    <!--referenceBlock name="customer_form_register">
+        <block class="Magento\Framework\View\Element\Template" name="customer_groups_additional_info_customer" template="Ws_Customer::addcustomergroup.phtml" before="-"/>
+    </referenceBlock -->
+
+    <referenceBlock name="customer_form_register">
+        <action method="setShowAddressFields">
+            <argument name="show.address.fields" xsi:type="boolean">true</argument>
+        </action>
+    </referenceBlock>
+
     <referenceContainer name="form.additional.info">
-        <block class="Magento\Framework\View\Element\Template" name="customer_groups_additional_info_customer" template="Ws_Customer::addcustomergroup.phtml"/>
+        <block class="Magento\Framework\View\Element\Template" name="customer_groups_additional_info_customer" template="Ws_Customer::addcustomergroup.phtml" before="-"/>
     </referenceContainer>
+
+    <referenceContainer name="form.additional.info">
+        <block class="Magento\CheckoutAgreements\Block\Agreements" name="terms_condition"  template="Ws_Customer::privacy.phtml" after="customer_groups_additional_info_customer"/>
+    </referenceContainer>
+
 </body>
 </page>

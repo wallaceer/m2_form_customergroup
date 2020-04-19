@@ -1,11 +1,11 @@
 <?php
-
 $blockObj= $block->getLayout()->createBlock('Ws\Customer\Block\Customergroups');
 $groups = $blockObj->getCustomerGroups();
-//$groups = $block->getCustomerGroups();
-//var_dump($groups);
-//$groups = [['value'=>'7','label'=>'Privati'],['value'=>'8','label'=>'Aziende']];
 ?>
+<fieldset class="fieldset set account group" data-hasrequired="<?php /*
+@escapeNotVerified */ echo __('* Required Fields') ?>">
+    <legend class="legend"><span><?php /* @escapeNotVerified */ echo
+            __('Additional Information') ?></span></legend>
 <div class="field group_id required">
     <label for="group_id" class="label"><span><?php /* @escapeNotVerified */ echo __('I want to register as') ?></span></label>
     <div class="control">
@@ -16,3 +16,4 @@ $groups = $blockObj->getCustomerGroups();
         </select>
     </div>
 </div>
+</fieldset>
