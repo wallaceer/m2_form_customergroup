@@ -13,11 +13,11 @@
     </referenceBlock>
 
     <referenceContainer name="form.additional.info">
-        <block class="Magento\Framework\View\Element\Template" name="customer_groups_additional_info_customer" template="Ws_Customer::addcustomergroup.phtml" before="-"/>
+        <block class="Magento\Framework\View\Element\Template" name="customer_groups_additional_info_customer" template="Ws_Customer::addcustomergroup.phtml" before="-" ifconfig="ws_customer/ws_form/ws_enable_group"/>
     </referenceContainer>
 
     <referenceContainer name="form.additional.info">
-        <block class="Magento\CheckoutAgreements\Block\Agreements" name="terms_condition"  template="Ws_Customer::privacy.phtml" after="customer_groups_additional_info_customer"/>
+        <block class="Magento\CheckoutAgreements\Block\Agreements" name="terms_condition"  template="Ws_Customer::privacy.phtml" after="customer_groups_additional_info_customer" ifconfig="ws_customer/ws_form/ws_enable_privacy"/>
     </referenceContainer>
 
 </body>
