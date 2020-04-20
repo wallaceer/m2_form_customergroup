@@ -1,0 +1,15 @@
+<?php
+$objm = \Magento\Framework\App\ObjectManager::getInstance();
+$customerSession = $objm->get('Magento\Customer\Model\Session');
+$customer = $customerSession->getCustomer()->getData();
+$wsPec = $customer['ws_pec'] ?? '';
+
+?>
+<fieldset class="fieldset info">
+<div class="field pec">
+    <label class="label" for="pec"><span><?php echo $block->escapeHtml(__('PEC')) ?></span></label>
+    <div class="control">
+        <input type="text" name="ws_pec" value="<?php echo $wsPec ?>" title="<?php echo __('PEC') ?>" class="input-text " id="ws_pec">
+    </div>
+</div>
+</fieldset>

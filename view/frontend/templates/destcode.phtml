@@ -1,0 +1,15 @@
+<?php
+$objm = \Magento\Framework\App\ObjectManager::getInstance();
+$customerSession = $objm->get('Magento\Customer\Model\Session');
+$customer = $customerSession->getCustomer()->getData();
+$wsPec = $customer['ws_destcode'] ?? '';
+
+?>
+<fieldset class="fieldset info">
+<div class="field pec">
+    <label class="label" for="destcode"><span><?php echo $block->escapeHtml(__('Codice Destinatario')) ?></span></label>
+    <div class="control">
+        <input type="text" name="ws_destcode" value="<?php echo $wsPec ?>" title="<?php echo __('Codice Destinatario') ?>" class="input-text " id="ws_destcode">
+    </div>
+</div>
+</fieldset>
