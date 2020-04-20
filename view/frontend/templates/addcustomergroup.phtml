@@ -2,10 +2,8 @@
 $blockObj= $block->getLayout()->createBlock('Ws\Customer\Block\Customergroups');
 $groups = $blockObj->getCustomerGroups();
 ?>
-<fieldset class="fieldset set account group" data-hasrequired="<?php /*
-@escapeNotVerified */ echo __('* Required Fields') ?>">
-    <legend class="legend"><span><?php /* @escapeNotVerified */ echo
-            __('Additional Information') ?></span></legend>
+<fieldset class="fieldset set account group" data-hasrequired="<?php /*@escapeNotVerified */ echo __('* Required Fields') ?>">
+    <legend class="legend"><span><?php /* @escapeNotVerified */ echo __('Additional Information') ?></span></legend>
 <div class="field group_id required">
     <label for="group_id" class="label"><span><?php /* @escapeNotVerified */ echo __('I want to register as') ?></span></label>
     <div class="control">

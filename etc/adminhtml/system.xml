@@ -11,17 +11,17 @@
             <group id="ws_form" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
                 <label>Customer account registration form</label>
                 <field id="ws_enable_group" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
-                    <label>Show Group </label>
+                    <label>Show Group</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     <comment>Select Yes or NO</comment>
                 </field>
                 <field id="ws_groups" translate="label comment" type="multiselect" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
-                    <label>Groups </label>
+                    <label>Groups</label>
                     <source_model>Magento\Customer\Model\ResourceModel\Group\Collection</source_model>
                     <comment>Select groups to enable in new customer account form</comment>
                 </field>
                 <field id="ws_enable_privacy" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
-                    <label>Show Terms and Conditions </label>
+                    <label>Show Terms and Conditions</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     <comment>Select Yes or NO</comment>
                 </field>
