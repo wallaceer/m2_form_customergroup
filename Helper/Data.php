@@ -16,5 +16,9 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
         return $this->getConfig('ws_customer/ws_form/ws_groups');
     }
 
+    public function getConfiguredRuleToShow(){
+        return $this->getConfig('ws_customer/ws_form/ws_show_privacy');
+    }
+
 }
 

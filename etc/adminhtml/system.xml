@@ -21,9 +21,13 @@
                     <comment>Select groups to enable in new customer account form</comment>
                 </field>
                 <field id="ws_enable_privacy" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
-                    <label>Show Privacy </label>
+                    <label>Show Terms and Conditions </label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     <comment>Select Yes or NO</comment>
+                </field>
+                <field id="ws_show_privacy" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Rule to show</label>
+                    <comment>Insert number of Terms and Conditions to show</comment>
                 </field>
             </group>
         </section>

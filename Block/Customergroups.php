@@ -64,4 +64,9 @@ Class Customergroups extends \Magento\Framework\View\Element\Template {
     }
 
 
+
+    public function getConfiguredShowPrivacy(){
+        return $this->_groups->getConfiguredRuleToShow();
+    }
+
 }
