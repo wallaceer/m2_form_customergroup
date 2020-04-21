@@ -1,7 +1,7 @@
 <?php
 $blockObj= $block->getLayout()->createBlock('Ws\Customer\Block\Customergroups');
 $customer = $blockObj->getCustomerData();
-$wsPec = $customer->getCustomAttribute('ws_pec')->getValue() ?? '';
+$wsPec = $customer->getCustomAttribute('ws_pec') ? $customer->getCustomAttribute('ws_pec')->getValue() : '';
 ?>
 <fieldset class="fieldset info">
 <div class="field pec">
