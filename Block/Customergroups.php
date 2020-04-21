@@ -31,11 +31,13 @@ Class Customergroups extends \Magento\Framework\View\Element\Template {
     public function __construct(
         \Magento\Backend\Block\Template\Context $context,
         \Magento\Customer\Model\ResourceModel\Group\Collection $customerGroup,
+        \Magento\Customer\Model\SessionFactory $customerSession,
         array $data = [],
         Data $groups
     ) {
         $this->_customerGroup = $customerGroup;
         $this->_groups = $groups;
+        $this->_customerSession = $customerSession->create();
         parent::__construct($context, $data);
     }
     
@@ -64,9 +66,31 @@ Class Customergroups extends \Magento\Framework\View\Element\Template {
     }
 
 
-
+    /**
+     * @return \Magento\Framework\App\Config\ScopeConfigInterface|mixed
+     */
     public function getConfiguredShowPrivacy(){
         return $this->_groups->getConfiguredRuleToShow();
+    }
+
+    /**
+     * @return bool
+     */
+    public function getLoggedinCustomerId() {
+        if ($this->_customerSession->isLoggedIn()) {
+            return $this->_customerSession->getId();
+        }
+        return false;
+    }
+
+    /**
+     * @return object
+     */
+    public function getCustomerData() {
+        if ($this->_customerSession->isLoggedIn()) {
+            return $this->_customerSession->getCustomerData();
+        }
+        return false;
     }
 
 }

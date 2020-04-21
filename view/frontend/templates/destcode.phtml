@@ -1,9 +1,7 @@
 <?php
-$objm = \Magento\Framework\App\ObjectManager::getInstance();
-$customerSession = $objm->get('Magento\Customer\Model\Session');
-$customer = $customerSession->getCustomer()->getData();
-$wsPec = $customer['ws_destcode'] ?? '';
-
+$blockObj= $block->getLayout()->createBlock('Ws\Customer\Block\Customergroups');
+$customer = $blockObj->getCustomerData();
+$wsPec = $customer->getCustomAttribute('ws_destcode')->getValue() ?? '';
 ?>
 <fieldset class="fieldset info">
 <div class="field pec">
