@@ -12,13 +12,13 @@ It add this fields to customer's data in the customer reserved area:
 - PEC
 - Recipient Code for digital billing
 
-By the admin panel, in Extensions WS -> Customer, you can: 
+By the admin panel, in Extensions WS -> Customer, you can:
 * enable the customer group
 * select which groups must be active in the select
 * enable Terms & Conditions
 * select which of the custom terms & conditions must be enabled
 * enable PEC
-* enable "Recipient Code" 
+* enable "Recipient Code"
 
 The section "Full street addredd data" should be enabled/disabled from xml layout file
 
@@ -35,17 +35,17 @@ To install it with composer you can insert this rows in your magento's composer.
 "repositories": {
 	"m2_warehouse":{
             "type": "git",
-            "url": "git@github.com:wallaceer/m2_customer.git"
+            "url": "git@github.com:wallaceer/m2_form_customergroup.git"
         }
     }
 ```
-  
-After edited composer.json 
+
+After edited composer.json
 - launch composer update
 - verify the module status with bin/magento module:status | grep Ws_Customer
 - enable the module, if necessary, with bin/magento module:enable Ws_Customer
 - run bin/magento setup:upgrade
-    
+
 For a manual installation:
 * copy the module in your magento `app/code`
 * run `bin/magento setup:upgrade`
